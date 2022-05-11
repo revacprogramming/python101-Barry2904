@@ -1,23 +1,14 @@
-# Loops & Iterators
+# Functions
 
-largest = 0
-smallest = None
-while True:
-    num = input("Enter a number: ")
-    if num == "done":
-        	break
-    try:
-        temp=int(num)
-    except:
-        print("Invalid input")
-        continue
-    if smallest is None:
-        smallest=temp
-    if largest<temp:
-        largest=temp
-    elif temp<smallest:
-        smallest=temp    
+def computepay(h,r):
+    return 40*r+(h-40)*1.5*r
 
-print("Maximum is", largest)
-print("Minimum is", smallest)
-    	
+hrs = input("Enter Hours:")
+h=float(hrs)
+rate= input("Enter Rate")
+r=float(rate)
+if h>40:
+    p = computepay(h,r)
+elif h<=40:
+    p=h*r
+print("Pay", p)

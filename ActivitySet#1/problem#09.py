@@ -1,15 +1,19 @@
-# Lists
-
-#filename = "dataset/romeo.txt"
+# Files 
+#testing
+#filename = "dataset/mbox-short.txt"
 fname = input("Enter file name: ")
 fh = open(fname)
-lst = list()
+count=0
+total=0
 for line in fh:
-    word=line.split()
-    for element in word:
-        if element in lst:
-            continue
-        else:
-            lst.append(element)
-lst.sort()
-print(lst)
+  if line.startswith("X-DSPAM-Confidence:"):
+    text="".join(line.split())
+    #line.rstrip()
+    #.replace(" ","")
+    #"".join(line.split())
+    find=line.find(":")
+    part=float(text[find+1:])
+    count=count+1
+    total=total+part
+    average=total/count
+print("Average spam confidence:",average)

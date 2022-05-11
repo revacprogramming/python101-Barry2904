@@ -1,7 +1,21 @@
-# Strings
+largest = 0
+smallest = None
+while True:
+    num = input("Enter a number: ")
+    if num == "done":
+        break
+    try:
+        temp=int(num)
+    except:
+        print("Invalid input")
+        continue
+    if smallest is None:
+        smallest=temp
+    if largest<temp:
+        largest=temp
+    elif temp<smallest:
+        smallest=temp    
 
-text = "X-DSPAM-Confidence:0.8475"
-startPos = text.find(':')
-piece = text[startPos+1:]
-end = float(piece)
-print(end)
+print("Maximum is", largest)
+print("Minimum is", smallest)
+            
