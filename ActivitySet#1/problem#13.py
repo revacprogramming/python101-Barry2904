@@ -17,7 +17,7 @@ for line in handle:
     hour = str(hour[:1])
     hour = hour[2:4]
     if hour in counts :
-        counts[hour] = 1 + counts[hour]
+        counts[hour] = counts[hour]+1
     else :
         counts.update({hour:1})
 lst = list()
