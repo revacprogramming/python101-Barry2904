@@ -1,8 +1,5 @@
-
-
 def add(p,q):
     return p+q
-
 
 def main():
     a = input("Enter 1st number of choice:-")
