@@ -1,3 +1,4 @@
+'''
 import datetime
 def WhenShouldIcode():
      return datetime.date.today()
@@ -14,3 +15,4 @@ def main():
     date = WhenShouldIcode()
     output(name,date)
 main()
+'''
