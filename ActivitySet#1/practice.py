@@ -16,3 +16,8 @@ def main():
     output(name,date)
 main()
 '''
+word=input("enter word:- ")
+n_list=word.split()
+ans=n_list[0:1]
+for i in ans:
+  print(i)
